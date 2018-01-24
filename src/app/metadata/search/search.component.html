@@ -1,0 +1,10 @@
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;">
+        <div class="card text-center p-4" *ngFor="let item of metadata" style="width:20%;">
+            <img class="card-img-top" [src]="item?.thumbnail">
+            <div class="card-body">
+                <p class="card-text">{{item?.group}}</p>
+                <h5 class="card-title">{{item?.title}}</h5>
+            </div>
+        </div>
+        
+</div>

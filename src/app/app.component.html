@@ -1,0 +1,18 @@
+
+<nav class="navbar fixed-top navbar-light bg-light" style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;">
+  <a class="navbar-brand" routerLink="/">
+    <img src="http://res.cloudinary.com/dzmrr9uj9/image/upload/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Rockstar Admin
+  </a>
+  <a class="nav-link" (click)="authService.login()" *ngIf="!authService.isAuthenticated()">Sign in</a>
+  <a class="nav-link" (click)="authService.logout()" *ngIf="authService.isAuthenticated()">Sign out</a>
+</nav>
+
+<main [@fadeInAnimation]="getRouterOutletState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+   <a class="navbar-brand" href="#">Fixed bottom</a>
+</nav>
