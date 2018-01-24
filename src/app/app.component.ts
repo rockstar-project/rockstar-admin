@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, fadeInAnimation } from './shared';
+import { AuthService, listAnimation } from './shared';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    animations: [ fadeInAnimation ]
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   
@@ -20,9 +19,5 @@ export class AppComponent implements OnInit {
         this.profile = this.authService.userProfile;
       }
   }
-
-    public getRouterOutletState(outlet) {
-        return outlet.isActivated ? outlet.activatedRoute : '';
-    }
 
 }

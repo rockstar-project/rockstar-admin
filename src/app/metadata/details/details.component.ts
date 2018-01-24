@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Metadata } from 'app/shared';
+import { Metadata } from './../metadata.model';
 
 @Component({
   selector: 'app-metadata-details',

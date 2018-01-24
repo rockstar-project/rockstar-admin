@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators';
-import { environment } from '../../../../environments/environment';
-import { Metadata, MetadataResultSet } from './../models';
+import { environment } from '../../environments/environment';
+import { Metadata, MetadataResultSet } from './metadata.model';
 
 @Injectable()
 export class MetadataService {

@@ -1,6 +1,7 @@
 :host {
     display: flex;
-    min-height: 100vh;
+    flex-wrap:wrap;
+    min-height: 100%;
 }
 
 .Grid {

@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { CallbackComponent } from './callback/callback.component';
-import { DashboardComponent } from './dashboard/dashoard.component';
 
 const routes: Routes =[
     { 
@@ -15,15 +14,11 @@ const routes: Routes =[
     },
     { 
         path: 'home',
-        component: HomeComponent 
-    },
-    { 
-        path: 'dashboard',             
-        component: DashboardComponent 
+        component: HomeComponent
     },
     { 
         path: 'callback',             
-        component: CallbackComponent 
+        component: CallbackComponent
     }
 ];
 

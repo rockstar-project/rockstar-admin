@@ -4,6 +4,7 @@ import { MetadataComponent } from './metadata.component';
 import { MetadataSearchComponent } from './search/search.component';
 import { MetadataDetailsComponent } from './details/details.component';
 import { MetadataNewComponent } from './new/new.component';
+import { MetadataResolve } from './metadata.resolve';
 
 export const MetadataRoutes: Routes = [
     {
@@ -17,7 +18,10 @@ export const MetadataRoutes: Routes = [
             },
             {
                 path: 'search',
-                component: MetadataSearchComponent
+                component: MetadataSearchComponent,
+                resolve: {
+                    metadata: MetadataResolve
+                }
             },
             {
                 path: ':id',

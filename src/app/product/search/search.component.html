@@ -1,0 +1,12 @@
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;" [@listAnimation]="div">
+    <div class="card text-center p-4" *ngFor="let productitem of productSearchResult?._embedded.productInfoResourceList" style="width:20%;">
+        <img class="card-img-top" [src]="productitem?.image">
+        <div class="card-img-overlay" style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;align-content:center;">
+            <img [src]="getImage(productitem, 'language')" width="100" height="100">
+            <img [src]="getImage(productitem, 'framework')" width="100" height="100">
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{productitem?.title}}</p>
+        </div>
+    </div>
+</div>

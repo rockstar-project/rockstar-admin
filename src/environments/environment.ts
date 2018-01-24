@@ -6,7 +6,7 @@ export const environment = {
 export const AUTH_CONFIG = {
   clientID: 'Ld9GqmtFPOKSoC1uqs1kRgSLAHsXvpvC',
   domain: 'rockstar.auth0.com',
-  redirect: 'http://localhost:4202/dashboard',
+  redirect: 'http://localhost:4202/metadata',
   scope: 'openid profile email search:products read:products search:metadata read:metadata download:artifacts create:artifacts',
   audience: 'https://api.rock-star.io/'
 };
