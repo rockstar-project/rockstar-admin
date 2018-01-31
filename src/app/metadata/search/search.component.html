@@ -1,7 +1,8 @@
-<div style="display:flex;flex-direction:row;flex-wrap:wrap;" [@listAnimation]="div">
-    <div class="card text-center p-4" *ngFor="let item of metadata">
-        <h5>{{item?.group}}</h5>
-        <img class="m-4" [src]="item?.thumbnail" width="100" height="100">
-        <p>{{item?.title}}</p>
+
+<div class="mat-typography" style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;" [@listAnimation]="div">
+    <div class="mat-card" *ngFor="let item of metadata?._embedded?.metadataResourceList" (click)="openDetails(item)">
+        <h4>{{item?.title}}</h4>
+        <img [src]="item?.thumbnail" width="100" height="100">
     </div>
+    
 </div>

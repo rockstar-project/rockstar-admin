@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { CallbackComponent } from './callback/callback.component';
+import { PageNotFoundComponent } from './shared/index';
 
 const routes: Routes =[
     { 
@@ -19,6 +20,10 @@ const routes: Routes =[
     { 
         path: 'callback',             
         component: CallbackComponent
+    },
+    {
+        path: "xx",
+        component: PageNotFoundComponent
     }
 ];
 

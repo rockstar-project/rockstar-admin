@@ -1,1 +1,116 @@
-<h3 class="text-muted">Metadata Details</h3>
+<!--
+<form [formGroup]="metadataform" (ngSubmit)="onSubmit()">
+    <div class="modal-header">
+        <h4 class="modal-title">Edit Metadata</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+            <div class="form-group">
+                <label for="inputSlug">Slug</label>
+                <input type="text" class="form-control" id="inputSlug" formControlName="slug">
+            </div>
+            <div class="form-group">
+                <label for="inputTitle">Title</label>
+                <input type="text" class="form-control" id="inputTitle" formControlName="title">
+            </div>
+            <div class="form-group">
+                <label for="inputDescription">Description</label>
+                <input type="textarea" class="form-control" id="inputDescription" formControlName="description">
+            </div>
+            <div class="form-group">
+                <label for="inputThumbnail">Thumbnail</label>
+                <input type="text" class="form-control" id="inputThumbnail" formControlName="thumbnail">
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-dark">Save</button>
+    </div>
+</form>
+-->
+<!--
+<div class="example-container">
+    <mat-form-field>
+        <input matInput id="inputSlug" type="text" placeholder="Slug" formControlName="slug">
+    </mat-form-field>
+
+        
+    <mat-form-field>
+        <input matInput id="inputTitle" type="text" placeholder="Title" formControlName="title">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput id="inputDescription" type="text" placeholder="Description" formControlName="description">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput id="inputThumbnail"  type="text" placeholder="Thumbnail" formControlName="thumbnail">
+    </mat-form-field>
+    
+    
+    <mat-form-field>
+        <mat-select placeholder="Select">
+        <mat-option value="option">CI/CD</mat-option>
+        <mat-option value="option">Architecture</mat-option>
+        <mat-option value="option">Framework</mat-option>
+        <mat-option value="option">Runtime</mat-option>
+        <mat-option value="option">Capability</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Group">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let group of groups" [value]="group">{{group}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+-->
+
+
+        <form [formGroup]="metadataform" (ngSubmit)="onSubmit()">
+
+            <div class="mat-dialog-header">
+              <h4 class="mat-card-title">Edit Metadata</h4>
+            </div>
+
+            <div class="mat-dialog-content">
+                <div class="mat-card" style="border:1px solid #d2d2d2;padding: 50px">
+
+                    <div style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;">
+
+                        <mat-form-field style="width:45%;margin:10px;">
+                            <input matInput placeholder="Slug" id="slug" formControlName="slug">
+                        </mat-form-field>
+
+                        <mat-form-field style="width:45%;margin:10px;">
+                            <input matInput placeholder="Title" id="title" formControlName="title">
+                        </mat-form-field>
+
+                    </div>
+
+                    <div style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;">
+
+                        <mat-form-field style="width:45%;margin:10px;">
+                            <input matInput placeholder="Thumbnail" id="thumbnail" formControlName="thumbnail">
+                        </mat-form-field>
+
+                        <mat-form-field style="width:45%;margin:10px;">
+                            <input matInput placeholder="Description" id="description" formControlName="description">
+                        </mat-form-field>
+        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mat-dialog-actions">
+                <button mat-button>Cancel</button>
+                <button mat-button mat-raised-button type="submit" >Save</button>
+            </div>
+
+
+          </form>
+
+    

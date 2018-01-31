@@ -5,6 +5,7 @@ import { MetadataSearchComponent } from './search/search.component';
 import { MetadataDetailsComponent } from './details/details.component';
 import { MetadataNewComponent } from './new/new.component';
 import { MetadataResolve } from './metadata.resolve';
+import { MetadataListComponent } from './list/list.component';
 
 export const MetadataRoutes: Routes = [
     {
@@ -13,8 +14,15 @@ export const MetadataRoutes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'search',
+                redirectTo: 'list',
                 pathMatch: 'full'
+            },
+            {
+                path: 'list',
+                component: MetadataListComponent,
+                resolve: {
+                    metadata: MetadataResolve
+                }
             },
             {
                 path: 'search',
@@ -24,7 +32,7 @@ export const MetadataRoutes: Routes = [
                 }
             },
             {
-                path: ':id',
+                path: 'details/:id',
                 component: MetadataDetailsComponent
             },
             {

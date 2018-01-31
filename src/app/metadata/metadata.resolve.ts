@@ -5,11 +5,11 @@ import { MetadataResultSet, Metadata } from './metadata.model';
 import { MetadataService } from './metadata.service';
 
 @Injectable()
-export class MetadataResolve implements Resolve<Array<Metadata>> {
+export class MetadataResolve implements Resolve<MetadataResultSet> {
 
   constructor(private metadataService: MetadataService) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Array<Metadata>> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<MetadataResultSet> {
     return this.metadataService.getAll();
   }
 

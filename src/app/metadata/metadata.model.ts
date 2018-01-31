@@ -10,6 +10,7 @@ export class Metadata {
     group: string;
     slug: string;
     title: string;
+    category: string;
     thumbnail: string;
     description: string;
     versions: Array<string> = [];

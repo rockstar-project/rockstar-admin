@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material';
 import { MetadataResultSet, Metadata } from './../metadata.model';
 import { listAnimation } from '../../shared/index';
+import { MetadataDetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-metadata-search',
@@ -11,12 +13,24 @@ import { listAnimation } from '../../shared/index';
 })
 export class MetadataSearchComponent implements OnInit {
 
-    metadata: Array<Metadata>;
+    metadata: MetadataResultSet;
 
-    constructor(private route: ActivatedRoute) {}
+    constructor(private route: ActivatedRoute, public dialog: MatDialog) {}
 
     ngOnInit() {
         this.metadata = this.route.snapshot.data['metadata'];
+    }
+
+    openDetails(item: Metadata): void {
+        let dialogRef = this.dialog.open(MetadataDetailsComponent, {
+          width: '1100px',
+          height: '700px',
+          data: item
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+          item = result;
+        });
     }
 
 }
